@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Lato Black"), local("Lato-Black"), url("http://zhangwenli.com/blog/font/lato900.woff") format("woff"); }
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #22C3AA;
+  color: #FFF;
+  position: relative;
+  font-family: Lato; }
+
+#owl-svg {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -75px; }
+  #owl-svg * {
+    fill: #22C3AA;
+    stroke: #FFF;
+    stroke-width: 32;
+    stroke-linecap: round;
+    stroke-linejoin: round; }
+
+#owl-body {
+  stroke-dasharray: 6515, 6517;
+  animation: owl-body-stroke 3s ease-in-out; }
+
+#owl-left-eye {
+  stroke-dasharray: 2212, 2214;
+  animation: owl-left-eye-stroke 1s ease-in-out 3s;
+  animation-fill-mode: both; }
+
+#owl-right-eye {
+  stroke-dasharray: 1609, 1611;
+  animation: owl-right-eye-stroke 1s ease-in-out 4s;
+  animation-fill-mode: both; }
+
+@keyframes owl-body-stroke {
+  0% {
+    stroke-dashoffset: 6515; }
+  100% {
+    stroke-dashoffset: 0; } }
+@keyframes owl-left-eye-stroke {
+  0% {
+    stroke-dashoffset: 2212;
+    visibility: hidden; }
+  100% {
+    stroke-dashoffset: 0;
+    visibility: visible; } }
+@keyframes owl-right-eye-stroke {
+  0% {
+    stroke-dashoffset: 1609;
+    visibility: hidden; }
+  100% {
+    stroke-dashoffset: 0;
+    visibility: visible; } }
+#link-panel {
+  position: absolute;
+  font-size: 1.2rem;
+  padding: 0 10px; }
+  #link-panel li {
+    display: inline-block;
+    padding: 5px 10px;
+    height: 45px;
+    transition: 1s; }
+    #link-panel li:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      position: relative;
+      top: -5px; }
+    #link-panel li:hover:before {
+      background-color: #FFF; }
+    #link-panel li a {
+      color: #EFEFEF;
+      text-decoration: none; }
+      #link-panel li a:hover {
+        color: #FFF; }
+.poem{
+	text-align: center;
+	
+}
