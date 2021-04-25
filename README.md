@@ -1,51 +1,94 @@
-# Leafeon
+# 码志
 
-Leafeon 是 <a href="http://www.pizn.net">PIZn</a> 的又一个 Jekyll 博客主题, 但它有些不同, 它支持在线编辑你的博文. 如果你的博客是在 GitHub pages 上建立的, 并且是以 `username.github.io` 作为项目名称, 那么, 你将会很需要它的这个在线编辑功能, 祝你使用愉快.
+我的个人博客：<https://startnight.github.io/>，欢迎 Star 和 Fork。
 
----
+## 概览
 
-Leafeon is another Jekyll blog theme design by <a href="http://www.pizn.net">PIZn</a>, but something different is it include the admin platform online. If your Jekyll blog host on GitHub pages and the repo name's like `username.github.io`, you will be excited to edit and publish your post.
+<!-- vim-markdown-toc GFM -->
 
-## Usage
+* [效果预览](#效果预览)
+* [Fork 指南](#fork-指南)
+* [使用文档](#使用文档)
+* [经验与思考](#经验与思考)
+* [联系我](#联系我)
+* [致谢](#致谢)
 
-1. Fork 这个项目的代码到你的 `username.github.io` 项目.
-2. 你只需要在浏览器中访问 `username.github.io/admin`, 然后用的 GitHub 账号关联下, 就可以编辑博文了.
-3. 保存好之后, 刷新博文页面即可.
+<!-- vim-markdown-toc -->
 
----
+## 效果预览
 
-1. Fork this repo to your `username.github.io` project.
-2. Write post on your admin platform ==> `username.github.io/admin/`.
-3. Save and everything is done.
+**[在线预览 &rarr;](https://startnight.github.io/)**
 
-## Author
+![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
 
-#### PIZn
+## Fork 指南
 
-* https://github.com/pizn
-* https://twitter.com/piznlin
-* http://www.pizn.net
+Fork 本项目之后，还需要做一些事情才能让你的页面「正确」跑起来。
 
-#### Donate
+1. 正确设置项目名称与分支。
 
-如果你认为我做的这些对你来说是有价值的, 并鼓励我进行更多开源和免费的开发. 那你可以资助我, 就算是一杯咖啡...If you find my work useful and you want to encourage the development of more free resources, you can do it by donating.
+   按照 GitHub Pages 的规定，名称为 `username.github.io` 的项目的 master 分支，或者其它名称的项目的 gh-pages 分支可以自动生成 GitHub Pages 页面。
 
-PIZn 的支付宝二维码:
+2. 修改域名。
 
-<img src='./images/alipay_qr.jpg' width=128 height=128 />
+   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容；如果不需要绑定自己的域名，那么删掉 CNAME 文件。
 
-PIZn 的微信支付二维码:
+3. 修改配置。
 
-<img src='./images/weixin-qr.jpg' width=128 height=128 />
+   网站的配置基本都集中在 \_config.yml 文件中，将其中与个人信息相关的部分替换成你自己的，比如网站的 url、title、subtitle 和第三方评论模块的配置等。
 
-## License
+   **评论模块：** 目前支持 disqus、gitment 和 gitalk，选用其中一种就可以了，推荐使用 gitalk。它们各自的配置指南链接在 \_config.yml 文件的 Comments 一节里都贴出来了。
 
-Copyright (c) 2016 PIZn.
+   **注意：** 如果使用 disqus，因为 disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus.username 修改成你自己的，否则请将该字段留空。我对该缺陷的记录见 [Issues#2][3]。
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+4. 删除我的文章与图片。
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+   如下文件夹中除了 template.md 文件外，都可以全部删除，然后添加你自己的内容。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+   * \_posts 文件夹中是我已发布的博客文章。
+   * \_drafts 文件夹中是我尚未发布的博客文章。
+   * \_wiki 文件夹中是我已发布的 wiki 页面。
+   * images 文件夹中是我的文章和页面里使用的图片。
+
+5. 修改「关于」页面。
+
+   pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
+
+## 使用文档
+
+- [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/)。
+
+- 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
+
+## 经验与思考
+
+* 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
+
+* 简约，尽量每个页面都不展示多余的内容。
+
+* 有时一图抵千言，有时可能只会拖慢网页加载速度。
+
+* 言之有物，不做无痛之呻吟。
+
+* 如果写技术文章，那先将技术原理完全理清了再开始写，一边摸索技术一边组织文章效率较低。
+
+* 杜绝难断句、难理解的长句子，如果不能将其拆分成几个简洁的短句，说明脑中的理解并不清晰。
+
+* 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。
+
+## 联系我
+
+如果对本博客模板或者内容有任何建议，可以通过 [Issues](https://github.com/mzlogin/mzlogin.github.io/issues)与我取得联系。
 
 
+## 致谢
+本博客源码基于 [MZlogin](https://github.com/mzlogin/mzlogin.github.io) 修改，感谢！
+本博客外观基于 [DONGChuan](https://dongchuan.github.io) 修改，感谢！
+
+Thanks for JetBrains' support.
+
+<a href="https://www.jetbrains.com/?from=mzlogin.github.io"><img src="./assets/images/jetbrains.svg"/></a>
+
+[1]: https://github.com/mzlogin/chinese-copywriting-guidelines
+[2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
+[3]: https://github.com/mzlogin/mzlogin.github.io/issues/2
