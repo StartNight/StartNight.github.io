@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://startnight.github.io/
+url: https://startnight.github.io
 date_format: "ordinal"
 title: Felix
 subtitle: "Unity3D开发者"
@@ -49,7 +49,7 @@ highlight_theme: github
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
+author: Felix Li
 organization: 
 organization_url: 
 github_username: startnight
