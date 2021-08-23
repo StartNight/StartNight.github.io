@@ -2,10 +2,10 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://startnight.github.io/
+url: https://startnight.github.io
 date_format: "ordinal"
 title: Felix
-subtitle: "Blog Blog Blog"
+subtitle: "康的个人博客"
 description: "康的个人博客"
 keywords: Blog, 个人
 timezone: Asia/Suzhou
